@@ -1,0 +1,305 @@
+@font-face{
+    font-family: Garet-bold;
+    src:url(../fonts/Garet-Heavy.otf);
+}
+
+@font-face{
+    font-family: Lovelace-Text;
+    src:url(../fonts/Zetafonts\ -\ Lovelace\ Text\ Regular.otf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garet;
+}
+
+body{
+    min-width: 800px;
+    min-height: 600px;
+}
+
+#cabecalho{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 40px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+#logo{
+    font-family: Garet-bold;
+    font-size: 1.6em;
+    margin-left: 3%;
+    color: #000000;
+    text-decoration: none;
+    font-weight:bolder;
+    pointer-events: none;
+}
+
+#searchbar{
+    font-size: 1.1em;
+    font-weight:500;
+    text-align: center;
+    width: 30%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background: #f6f6f6;
+}
+
+#userbtn src{
+    display: flex;
+    width: 10px;
+    height: 10px;
+}
+
+#container{
+    top: 59px;
+    left: 0;
+    width: 100%;
+}
+
+#container-lateral{
+    position:fixed;
+    display: block;
+    top: 62px;
+    width: 22%;
+    min-width: 176.4px;
+    height: 100%;
+    float:left;
+    background-color: #f6f6f6;
+}
+
+#user-redirect{
+    display: block;
+    font-size: 1.5em;
+    padding-top: 10px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-weight:bolder;
+}
+
+#menu-lateral{
+    display: block;
+    width: 100%;
+}
+
+.btn-menu{
+    display: block;
+    width: 98%;
+    height: 50px;
+    margin: .2% 1%;
+    padding: 13px 20%;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3em;
+    color: #000000;
+}
+
+.btn-menu:hover{
+    background: #d0d0d0;
+    overflow: auto;
+}
+
+#conteudo{
+    position: relative;
+    width: 74%;
+    top: 62px;
+    margin-top: 5px;
+    margin-right: 2%;
+    padding: 1%;
+    float: right;
+}
+
+#conteudo h2{
+    padding: 5px 10px;
+    background-color: #ff914d;
+    color: white;
+}
+
+h1{
+    font-family: Lovelace-Text;
+}
+
+.icons-conteudo{
+    display: block;
+    margin-top: 2px;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.icons-conteudo:hover{
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+#filtro-form{
+    display: flex;
+}
+
+#filtro-form select, #filtro-form input{
+    width: 10%;
+    height: 24px;
+    margin: 0px .3%;
+    padding: 1px;
+}
+
+#filtro-form button{
+    margin: -1px .3%;
+    padding: 2px .3%;
+    background-color: #ff914d;
+    font-size: 1.1em;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px black;
+}
+
+#btn-acao{
+    margin: 5px 3px;
+    padding: 5px;
+    background-color: #ff914d;
+    font-size: 1.1em;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 3px black;
+}
+
+#btn-acao:hover{
+    background-color: #bb5a1d;
+}
+
+.cad-button{
+    left: 75%;
+    top: 32%;
+
+}
+
+#table-panel{
+    width: 100%;
+    margin-top: 2%;
+    border: 1px solid #000000;
+    background: whitesmoke;
+}
+
+#table-header th{
+    padding: 5px;
+    border: 1px solid #000000;
+    text-align: center;
+    font-weight: 600;
+}
+
+#table-rows td{
+    padding: 3px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+#form{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+#botoes-acao{
+    position: fixed;
+    display: flex;
+    width: 72%;
+    height: 12%;
+    border: 1px solid black;
+    padding: 1%;
+    top: 80%;
+    justify-content:space-between;
+}
+
+#botoes-acao button{
+    height: 100%;
+    width: 20%;
+    font-size: 1.5em;  
+}
+
+#cad-opcoes{
+    margin-top: 2%;
+    display: block;
+    width: 30%;
+}
+
+#cad-opcoes input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#descricao{
+    text-align: initial;
+}
+
+#form-cad {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+#form-cad label{
+    margin-bottom: 5px;
+  }
+  
+  
+#cad-opcoes a{
+    margin:.5%;
+    display: flex;
+    padding: 2%;
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+    color:#000000;   
+}
+
+#cad-opcoes a:hover{
+    background-color: #d0d0d0;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#descricao{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+}
+
+.alerta{
+    position:relative;
+    display: flex;
+    width: 100%;
+    background-color: #d0d0d0;
+    border: 1px solid #000000;
+    top: 500px;
+    text-align: center;
+}

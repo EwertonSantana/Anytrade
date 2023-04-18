@@ -1,0 +1,709 @@
+/* Importação da fonte Nunito com pesos 200, 300, 400, 600 e 700 do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* Definição das variáveis de cores */
+:root{
+--black: #000000;
+--orange:#ff914d;
+}
+
+/* Definição de estilos para todos os elementos */
+*{
+font-family: 'Nunito', sans-serif; /* Definição da fonte padrão */
+margin: 0; /* Remoção das margens padrão */
+padding:0; /* Remoção do preenchimento padrão */
+box-sizing: border-box; /* Cálculo do tamanho incluindo bordas e preenchimentos */
+outline: none; /* Remoção do contorno padrão dos elementos quando em foco */
+border:none; /* Remoção das bordas padrão */
+text-decoration: none; /* Remoção do sublinhado padrão */
+text-transform: capitalize; /* Transformação do texto em maiúsculas somente na primeira letra de cada palavra */
+transition: all .2s linear; /* Definição da transição suave de 0.2 segundos em todos os estilos */
+}
+
+/* Definição de estilos para o elemento html */
+html{
+font-size: 62.5%; /* Definição do tamanho da fonte em 62.5% para facilitar o cálculo em relação ao tamanho padrão */
+overflow-x: hidden; /* Ocultação da barra de rolagem horizontal */
+scroll-padding-top:6rem; /* Definição do espaçamento superior do conteúdo quando a rolagem é acionada */
+scroll-behavior: smooth; /* Definição da rolagem suave ao clicar em links */
+}
+
+/* Definição de estilos para o elemento section */
+section{
+padding:2rem 9%; /* Definição do espaçamento interno */
+}
+
+/* Definição de estilos para o elemento com classe heading */
+.heading{
+text-align: center; /* Centralização do texto */
+text-transform: uppercase; /* Transformação do texto em maiúsculas */
+font-size: 4rem; /* Definição do tamanho da fonte */
+color:var(--black); /* Definição da cor do texto a partir da variável --black */
+padding:1rem; /* Definição do espaçamento interno */
+}
+
+/* Definição de estilos para o elemento span dentro do elemento com classe heading */
+.heading span{
+text-transform: uppercase; /* Transformação do texto em maiúsculas */
+color:var(--orange); /* Definição da cor do texto a partir da variável --orange */
+}
+
+.btn{
+  display: inline-block; /* define o elemento como um bloco, mas sem quebrar a linha */
+  margin-top: 1rem; /* define a margem superior de 1rem */
+  border-radius: .5rem; /* define o raio das bordas como 0,5rem para dar um efeito arredondado */
+  border:.2rem solid var(--black); /* define a largura, estilo e cor da borda */
+  font-weight: bolder; /* define o peso da fonte como bolder para torná-la mais espessa */
+  font-size: 1.7rem; /* define o tamanho da fonte como 1,7rem */
+  color:var(--black); /* define a cor do texto como a variável --black */
+  cursor: pointer; /* define o cursor do mouse como pointer */
+  background:#fff; /* define a cor de fundo como branco */
+  padding:.8rem 3rem; /* define o preenchimento interno superior e inferior como 0,8rem e o preenchimento esquerdo e direito como 3rem */
+}
+
+
+
+
+.btn:hover{
+  background:var(--orange); /* When the mouse hovers over the button, the background color changes to the value of the CSS variable --orange */
+  color:#fff; /* The text color changes to white */
+}
+
+header{
+  position: fixed; /* The header element is fixed in the viewport */
+  top:0; left:0; right:0; /* The header element is positioned at the top left and right of the viewport */
+  z-index: 1000; /* The header element has a z-index of 1000, which means it will be displayed on top of other elements */
+  background:#fff; /* The background color of the header element is white */
+  padding:2rem 9%; /* The padding on the top and bottom of the header element is 2rem, and the padding on the left and right is 9% of the viewport width */
+  display: flex; /* The header element is a flex container */
+  align-items: center; /* The child elements of the header element are vertically centered */
+  justify-content: space-between; /* The child elements of the header element are horizontally spaced out evenly */
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); /* The header element has a box shadow of 0px on the x-axis, .5rem (8px) on the y-axis, 1rem (16px) blur radius, and a slightly transparent black color */
+}
+
+header .logo{
+  font-size: 2.5rem; /* The font size of the element with the class "logo" inside the header is 2.5rem (40px) */
+  color:var(--black); /* The text color of the element with the class "logo" inside the header is the value of the CSS variable --black */
+}
+
+header .navbar a{
+  font-size: 1.7rem; /* The font size of the links inside the element with the class "navbar" inside the header is 1.7rem (27px) */
+  color:var(--black); /* The text color of the links inside the element with the class "navbar" inside the header is the value of the CSS variable --black */
+  margin:0 1rem; /* The links inside the element with the class "navbar" inside the header have a margin of 0 on the top and bottom and 1rem (16px) on the left and right */
+}
+
+header .navbar a:hover{
+  color:var(--orange); /* When the mouse hovers over the links inside the element with the class "navbar" inside the header, the text color changes to the value of the CSS variable --orange */
+}
+
+header .icons a{
+  font-size: 2.5rem; /* The font size of the links inside the element with the class "icons" inside the header is 2.5rem (40px) */
+  color:var(--black); /* The text color of the links inside the element with the class "icons" inside the header is the value of the CSS variable --black */
+  margin-left:1.5rem; /* The links inside the element with the class "icons" inside the header have a margin of 0 on the top and bottom and 1.5rem (24px) on the left */
+}
+
+header .icons a:hover{
+  color:var(--orange); /* When the mouse hovers over the links inside the element with the class "icons" inside the header, the text color changes to the value of the CSS variable --orange */
+}
+
+
+
+
+#menu-bar{ /* estilo para o elemento com o ID menu-bar */
+  font-size: 2.5rem; /* tamanho da fonte 2.5 rem */
+  padding: .5rem 1.5rem; /* preenchimento de .5rem (cima e baixo) e 1.5rem (esquerda e direita) */
+  border:.1rem solid var(--black); /* borda sólida com 0.1 rem de largura e cor definida pela variável --black */
+  color:var(--black); /* cor do texto definida pela variável --black */
+  border-radius: .3rem; /* borda arredondada com 0.3rem de raio */
+  cursor: pointer; /* cursor do mouse como um ponteiro */
+  display: none; /* o elemento não é exibido na tela */
+}
+
+.home{ /* estilo para o elemento com a classe home */
+  padding:0; /* nenhum preenchimento */
+  position:relative; /* posicionamento relativo */
+}
+
+.home .slide-container .slide{ /* estilo para os elementos com as classes slide-container e slide dentro do elemento com a classe home */
+  min-height: 100vh; /* altura mínima de 100% da altura da viewport */
+  display: flex; /* display flex para poder posicionar os elementos filhos */
+  align-items: center; /* alinhamento vertical centralizado */
+  flex-wrap: wrap; /* quebra de linha automática quando o espaço horizontal é insuficiente */
+  gap:1.5rem; /* espaçamento de 1.5rem entre os elementos filhos */
+  padding:0 9%; /* preenchimento de 0 em cima e em baixo, 9% nas laterais */
+  padding-top: 9rem; /* preenchimento de 9rem em cima */
+}
+
+.home .slide-container .slide .content{ /* estilo para o elemento com a classe content dentro do elemento com as classes slide-container e slide dentro do elemento com a classe home */
+  flex:1 1 40rem; /* crescimento, encolhimento e base definidos para a flexibilidade horizontal */
+  animation: slideContent .5s linear 1s backwards; /* animação com duração de 0.5s, linear, com início de 1s para trás, definida pela regra de animação keyframes slideContent */
+}
+
+@keyframes slideContent{ /* regra de animação com nome slideContent */
+  0%{ /* início da animação */
+    opacity: 0; /* opacidade 0 */
+    transform: translateX(-10rem); /* translação horizontal de -10rem */
+  }
+}
+
+.home .slide-container .slide .image{ /* estilo para o elemento com a classe image dentro do elemento com as classes slide-container e slide dentro do elemento com a classe home */
+  flex:1 1 50rem; /* crescimento, encolhimento e base definidos para a flexibilidade horizontal */
+  padding-bottom: 15rem; /* preenchimento de 15rem na parte de baixo */
+  position: relative; /* posicionamento relativo */
+  z-index: 0; /* z-index igual a 0 */
+}
+
+.home .slide-container .slide .image .shoe{ /* estilo para o elemento com a classe shoe dentro do elemento com as classes image, slide-container e slide dentro do elemento com a classe home */
+  width:100%; /* largura 100% */
+  transform: rotate(-35deg);
+  animation:shoe .3s linear;
+}
+
+
+
+
+
+
+/* Define a animação "shoe" com uma rotação e escala inicial */
+@keyframes shoe{
+  0%{
+    transform: rotate(0deg) scale(.5);
+  }
+}
+
+/* Define o estilo para o texto que fica em cima da imagem */
+.home .slide-container .slide .image .text{
+  position: absolute;
+  top:0; left:0;
+  z-index: -1;
+  animation:shoeText .5s linear .5s backwards;
+}
+
+/* Define a animação "shoeText" para o texto que fica em cima da imagem */
+@keyframes shoeText{
+  0%{
+    opacity: 0;
+    top:-10rem;
+  }
+}
+
+/* Define o estilo para o elemento span dentro do .content */
+.home .slide-container .slide .content span{
+  font-size: 2rem;
+  color:var(--orange);
+}
+
+/* Define o estilo para o elemento h3 dentro do .content */
+.home .slide-container .slide .content h3{
+  font-size: 5rem;
+  color:var(--black);
+}
+
+/* Define o estilo para o elemento p dentro do .content */
+.home .slide-container .slide .content p{
+  font-size: 1.7rem;
+  color:#666;
+  padding:.5rem 0;
+}
+
+/* Define o background da primeira slide */
+.home .slide-container:nth-child(1) .slide{
+  background:url(../images/home-bg-1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Define o background da segunda slide */
+.home .slide-container:nth-child(2) .slide{
+  background:url(../images/home-bg-2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Define o background da terceira slide */
+.home .slide-container:nth-child(3) .slide{
+  background:url(../images/home-bg-3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Oculta todas as slides */
+.home .slide-container{
+  display: none;
+}
+
+
+
+
+
+/* Define o estilo da classe slide-container quando ela está ativa */
+.home .slide-container.active{
+  display: block;
+}
+
+/* Define os estilos dos botões de navegação anterior e próximo */
+.home #prev,
+.home #next{
+  position: absolute; /* posição absoluta */
+  top:50%; /* posição vertical no meio da seção pai */
+  transform:translateY(-50%); /* posiciona os botões verticalmente no meio da seção pai */
+  border-radius: 50%; /* borda arredondada */
+  z-index: 100; /* coloca os botões na frente dos outros elementos */
+  height:5rem; /* altura */
+  width:5rem; /* largura */
+  line-height: 4.5rem; /* alinhamento vertical */
+  font-size: 2rem; /* tamanho da fonte */
+  color:var(--black); /* cor do texto */
+  border:.2rem solid var(--black); /* borda sólida preta */
+  cursor: pointer; /* cursor de clique */
+  text-align: center; /* centraliza o texto horizontalmente */
+}
+
+/* Define os estilos dos botões de navegação anterior e próximo quando passa o mouse sobre eles */
+.home #prev:hover,
+.home #next:hover{
+  color:#fff; /* cor do texto branco */
+  background:var(--orange); /* fundo laranja */
+}
+
+/* Define os estilos do botão de navegação anterior */
+.home #prev{
+  left:3rem; /* posição à esquerda */
+}
+
+/* Define os estilos do botão de navegação próximo */
+.home #next{
+  right:3rem; /* posição à direita */
+}
+
+
+
+.service .box-container{
+  display: flex;                 /* Define o tipo de layout como flexbox */
+  flex-wrap: wrap;               /* Define que os itens podem ser quebrados em linhas */
+  gap:1.5rem;                    /* Define o espaçamento entre os elementos */
+  background:#f9f9f9;            /* Define a cor de fundo do contêiner */
+  border:.1rem solid rgba(0,0,0,.1); /* Define uma borda com largura de 0.1rem, sólida, e uma cor RGBA */
+  border-radius: .5rem;          /* Define o raio do arredondamento das bordas */
+  padding:2rem;                  /* Define o preenchimento interno do contêiner */
+}
+
+.service .box-container .box{
+  text-align: center;            /* Centraliza o conteúdo horizontalmente */
+  flex:1 1 30rem                 /* Define a proporção de crescimento, encolhimento e tamanho máximo dos elementos filho */
+}
+
+.service .box-container .box i{
+  font-size: 4rem;               /* Define o tamanho da fonte para o ícone */
+  color:var(--orange);           /* Define a cor do ícone usando a variável CSS definida em outro lugar */
+}
+
+.service .box-container .box h3{
+  font-size: 2rem;               /* Define o tamanho da fonte para o título do box */
+  color:var(--black);            /* Define a cor do título usando a variável CSS definida em outro lugar */
+  padding-top: 1rem;             /* Define o preenchimento superior do título */
+}
+
+.service .box-container .box p{
+  font-size: 1.5rem;             /* Define o tamanho da fonte para o parágrafo */
+  color:#666;                    /* Define a cor do parágrafo */
+  padding:1rem 0;                /* Define o preenchimento interno do parágrafo */
+}
+
+.products .box-container{
+  display: flex;                 /* Define o tipo de layout como flexbox */
+  flex-wrap: wrap;               /* Define que os itens podem ser quebrados em linhas */
+  gap:1.5rem;                    /* Define o espaçamento entre os elementos */
+}
+
+
+.products .box-container .box{
+  border:.1rem solid rgba(0,0,0,.1); /* define a borda de cada box */
+  border-radius: .5rem; /* define um raio de borda arredondado */
+  text-align: center; /* alinha o conteúdo do box no centro */
+  position: relative; /* define o posicionamento relativo */
+  overflow: hidden; /* oculta o conteúdo que ultrapassar o tamanho do box */
+  background:#f9f9f9; /* define um fundo para cada box */
+  flex:1 1 30rem; /* define o comportamento flexível dos boxes */
+}
+
+.products .box-container .box .content{
+  padding:1.5rem; /* define o preenchimento para o conteúdo do box */
+}
+
+.products .box-container .box img{
+  height:10rem; /* define a altura da imagem */
+  transform: rotate(-35deg); /* rotaciona a imagem em -35 graus */
+  filter:drop-shadow(0 .5rem 1rem rgba(0,0,0,.1)); /* aplica uma sombra na imagem */
+  margin:8rem 2rem; /* define as margens da imagem */
+}
+
+.products .box-container .box:hover img{
+  transform: rotate(-35deg) scale(1.2); /* aumenta a escala da imagem em 1.2 quando o cursor passa sobre o box */
+}
+
+.products .box-container .box .icons{
+  display: flex; /* define o display como flexível */
+  flex-flow: column; /* define a direção das caixas de ícones como vertical */
+  position: absolute; /* define o posicionamento absoluto */
+  top:.5rem; left:-10rem; /* define a posição superior e esquerda das caixas de ícones */
+}
+
+.products .box-container .box:hover .icons{
+  left:1rem; /* define a posição esquerda das caixas de ícones quando o cursor passa sobre o box */
+}
+
+.products .box-container .box .icons a{
+  height:4.5rem; /* define a altura dos ícones */
+  width:5rem; /* define a largura dos ícones */
+  line-height: 4.5rem; /* define a altura da linha do ícone */
+  font-size: 2rem; /* define o tamanho da fonte do ícone */
+  color:var(--black); /* define a cor do ícone */
+  border:.1rem solid var(--black); /* define uma borda para cada ícone */
+  border-radius: .5rem; /* define um raio de borda arredondado */
+  background:#fff; /* define um fundo para cada ícone */
+  margin-top: .5rem; /* define a margem superior dos ícones */
+}
+
+.products .box-container .box .icons a:hover{
+  background:var(--orange); /* define o fundo do ícone como laranja quando o cursor passa sobre ele */
+  color:#fff; /* define a cor do ícone como branca quando o cursor passa sobre ele */
+}
+
+.products .box-container .box .content h3{
+  color:var(--black); /* define a cor do título do conteúdo do box */
+  font-size: 2.5rem; /* define o tamanho da fonte do título do conteúdo do box */
+}
+
+.products .box-container .box .content .price{
+  color:var(--black);
+  font-size: 2.5rem;
+  font-weight: bolder;
+  padding:1rem 0;
+}
+
+
+.products .box-container .box .content .price span{
+  color:var(--orange); /* Define a cor do texto como a variável CSS --orange */
+  font-size: 1.5rem; /* Define o tamanho do texto como 1.5rem */
+  text-decoration: line-through; /* Define o estilo de decoração do texto como riscado */
+}
+
+.products .box-container .box .content .stars{
+  padding-bottom: 1rem; /* Adiciona um espaçamento inferior de 1rem para o elemento */
+}
+
+.products .box-container .box .content .stars i{
+  font-size: 1.7rem; /* Define o tamanho do ícone como 1.7rem */
+  color:var(--orange); /* Define a cor do ícone como a variável CSS --orange */
+}
+
+.featured .row{
+  display: flex; /* Define o elemento como um container flex */
+  flex-wrap: wrap; /* Define como deve ocorrer a quebra de linha */
+  gap:1.5rem; /* Define o espaçamento entre elementos dentro do container */
+  border:.1rem solid rgba(0,0,0,.1); /* Define uma borda sólida de 0.1rem com a cor rgba(0,0,0,.1) */
+  border-radius: .5rem; /* Define o raio da borda como 0.5rem */
+  background:#f9f9f9; /* Define o fundo do container como a cor #f9f9f9 */
+  padding:2rem; /* Define um espaçamento interno de 2rem para o conteúdo do container */
+  align-items: center; /* Define como os itens devem ser alinhados verticalmente */
+  margin:1.5rem 0; /* Define as margens superior e inferior como 1.5rem e 0, respectivamente */
+}
+
+.featured .row .content{
+  flex:1 1 40rem; /* Define o crescimento e encolhimento do elemento dentro do container flex e a largura do elemento como 40rem */
+}
+
+.featured .row .image-container{
+  display:flex; /* Define o elemento como um container flex */
+  gap:1.5rem; /* Define o espaçamento entre elementos dentro do container */
+  align-items: center; /* Define como os itens devem ser alinhados verticalmente */
+  flex:1 1 50rem; /* Define o crescimento e encolhimento do elemento dentro do container flex e a largura do elemento como 50rem */
+}
+
+.featured .row .image-container .small-image{
+  width:20%; /* Define a largura do elemento como 20% */
+}
+
+.featured .row .image-container .big-image{
+  width:80%; /* Define a largura do elemento como 80% */
+  padding:1rem; /* Define um espaçamento interno de 1rem para o conteúdo do elemento */
+}
+
+
+.featured .row .image-container .small-image img{
+  width:100%; /* define a largura da imagem como 100% do tamanho do elemento pai */
+  padding:1rem; /* adicione 1rem de padding em todas as direções */
+  border:.1rem solid rgba(0,0,0,.3); /* adicione uma borda sólida de 0.1rem com cor RGBA */
+  cursor: pointer; /* altera o cursor do mouse para um ponteiro quando passa sobre a imagem */
+}
+
+.featured .row .image-container .small-image img:hover{
+  background:#ccc; /* adicione um fundo cinza claro quando passa o mouse sobre a imagem */
+}
+
+.featured .row .image-container .big-image img{
+  width:100%; /* define a largura da imagem como 100% do tamanho do elemento pai */
+}
+
+.featured .row .image-container .big-image img:hover{
+  transform: scale(1.05); /* aumente o tamanho da imagem em 5% quando o mouse passar sobre ela */
+}
+
+.featured .row .content h3{
+  font-size: 2.5rem; /* defina o tamanho da fonte para 2.5rem */
+  color:var(--black); /* defina a cor do texto como a variável CSS definida como preto */
+}
+
+
+/* Define o estilo dos ícones das estrelas */
+.featured .row .content .stars i{
+  font-size: 1.7rem;
+  color:var(--orange);
+  padding:.5rem 0;
+}
+
+/* Define o estilo dos parágrafos na seção "featured" */
+.featured .row .content p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+/* Define o estilo do preço na seção "featured" */
+.featured .row .content .price{
+  font-size: 2.5rem;
+  color:var(--black);
+  font-weight: bolder;
+}
+
+/* Define o estilo do preço antigo na seção "featured" */
+.featured .row .content .price span{
+  font-size: 1.5rem;
+  color:var(--orange);
+  text-decoration: line-through;
+}
+
+/* Define o estilo do contêiner de boxes na seção "review" */
+.review .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+/* Define o estilo dos boxes na seção "review" */
+.review .box-container .box{
+  flex:1 1 30rem;
+  text-align: center;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  background:#f9f9f9;
+  padding:2rem;
+}
+
+/* Define o estilo das imagens nos boxes na seção "review" */
+.review .box-container .box img{
+  border-radius: 50%;
+  object-fit: cover;
+  height:15rem;
+  width:15rem;
+  margin:1rem 0;
+}
+
+
+
+/* Estiliza o título h3 dentro da div box do container de avaliações */
+.review .box-container .box h3{
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+/* Estiliza o parágrafo dentro da div box do container de avaliações */
+.review .box-container .box p{
+  font-size: 1.6rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+/* Estiliza a class stars dentro da div box do container de avaliações */
+.review .box-container .box .stars i{
+  color:var(--orange);
+  font-size: 2rem;
+}
+
+/* Define o espaçamento entre a div newsletter e outros elementos */
+.newsletter{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+/* Estiliza a div content dentro da div newsletter */
+.newsletter .content{
+  text-align: center;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  background:#f9f9f9;
+  padding:2rem;
+}
+
+/* Estiliza o título h3 dentro da div content da div newsletter */
+.newsletter .content h3{
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+/* Estiliza o parágrafo dentro da div content da div newsletter */
+.newsletter .content p{
+  font-size: 1.5rem;
+  color:#666;
+  margin:1rem auto;
+  max-width: 60rem;
+}
+
+
+.newsletter .content form{
+  margin:1rem auto;  /* adiciona uma margem superior e inferior de 1rem e centraliza horizontalmente */
+  max-width: 50rem;  /* define a largura máxima do formulário como 50rem */
+  display: flex;  /* usa flexbox para posicionar os elementos filhos do formulário */
+}
+
+.newsletter .content form .box{
+  width:100%;  /* define a largura da caixa de entrada de texto como 100% */
+  font-size: 1.7rem;  /* define o tamanho da fonte como 1.7rem */
+  text-transform: none;  /* desativa a transformação de texto (maiuscula/minuscula) */
+  color:#333;  /* define a cor do texto como cinza escuro */
+  padding:1rem;  /* adiciona uma margem interna de 1rem */
+  border:.2rem solid var(--black);  /* define uma borda sólida com 0.2rem de espessura e a cor é uma variável CSS definida em outro lugar como preto */
+  border-right: none;  /* remove a borda direita */
+  margin-top: 1rem;  /* adiciona uma margem superior de 1rem */
+}
+
+.newsletter .content form .btn{
+  border-radius: 0;  /* define a borda da imagem do botão como 0 (sem borda arredondada) */
+}
+
+.footer .box-container{
+  border:.1rem solid rgba(0,0,0,.1);  /* define uma borda sólida com 0.1rem de espessura e uma cor em rgba */
+  border-radius: .5rem;  /* define um raio de borda de 0.5rem */
+  background:#f9f9f9;  /* define o plano de fundo como uma cor clara */
+  padding:2rem;  /* adiciona uma margem interna de 2rem */
+  display: flex;  /* usa flexbox para posicionar os elementos filhos */
+  flex-wrap: wrap;  /* permite que os elementos filho sejam quebrados para a próxima linha quando a largura da tela é reduzida */
+  gap:1.5rem;  /* define o espaço entre os elementos filho como 1.5rem */
+}
+
+.footer .box-container .box{
+  flex:1 1 20rem;  /* define a largura, a flex-grow e a flex-shrink para os elementos filho */
+}
+
+.footer .box-container .box h3{
+  color:var(--black);  /* define a cor do texto como preto */
+  font-size: 2.5rem;  /* define o tamanho da fonte como 2.5rem */
+  padding-bottom: 1.5rem;  /* adiciona uma margem inferior de 1.5rem */
+}
+
+.footer .box-container .box a{
+  color:#666;  /* define a cor do texto como cinza */
+  font-size: 1.5rem;  /* define o tamanho da fonte como 1.5rem */
+  padding-bottom: 1.5rem;  /* adiciona uma margem inferior de 1.5rem */
+  display: block;  /* define o elemento como um bloco */
+}
+
+.footer .box-container .box a:hover{
+  color:var(--orange);  /* define a cor do texto como laranja quando o cursor pass*/
+}
+
+.footer .box-container .credit{
+  text-align: center; /* Centraliza o texto */
+  width:100%; /* Largura total */
+  border-top: .1rem solid rgba(0,0,0,.1); /* Borda superior fina com cor */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  padding:1rem; /* Espaçamento interno */
+  padding-top: 2rem; /* Espaçamento superior */
+  color:#999; /* Cor do texto */
+}
+
+.footer .box-container .credit span{
+  color:var(--orange); /* Cor do elemento span (variável CSS) */
+}
+
+
+/* media queries  */
+
+@media (max-width:991px){ /* Regra de mídia para telas com no máximo 991 pixels de largura */
+
+  html{
+    font-size: 55%; /* Define o tamanho da fonte base em 55% */
+  }
+
+  header{
+    padding:2rem; /* Espaçamento interno do elemento header */
+  }
+
+  section{
+    padding:2rem; /* Espaçamento interno do elemento section */
+  }
+
+}
+
+   
+
+/*Esse trecho de código define estilos para a barra de navegação (navbar) do cabeçalho (header) em telas com largura máxima de 768 pixels.*/
+
+@media (max-width:768px){
+
+  #menu-bar{
+    display: block;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; left:-120%;
+    width:100%;
+    background:#eee;
+    border-top: .1rem solid rgba(0,0,0,.1);
+  }
+
+  header .navbar.active{
+    left:0;
+  }
+
+  header .navbar a{
+    font-size: 2rem;
+    background:#fff;
+    border:.1rem solid var(--black);
+    border-radius: .5rem;
+    padding:1.5rem;
+    margin:1.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .home .slide-container .slide .image .text{
+    width:60%;
+  }
+
+  .home #prev,
+  .home #next{
+    top:85%;
+  }
+
+}
+
+@media (max-width:400px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .home .slide-container .slide .image{
+    padding-bottom: 6rem;
+  }
+
+  .heading{
+    font-size: 3rem;
+  }
+
+}
+
+
