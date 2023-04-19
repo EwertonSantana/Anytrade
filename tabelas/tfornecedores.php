@@ -52,7 +52,7 @@ switch ($_REQUEST['filtro']) { //A segunda linha define a instrução switch, qu
     <div container>
         <!--Menu Lateral-->
         <section id="container-lateral">
-            <a href="#" id="user-redirect">Usuário</a><br>
+            <a href="#" id="user-redirect"><?php echo $_SESSION['UsuarioNome']; ?></a><br>
             <nav id="menu-lateral">
                 <a href="../cadastros.php" class="btn-menu">Cadastros</a>
                 <a href="../estoque.php" class="btn-menu">Estoque</a>
@@ -61,6 +61,7 @@ switch ($_REQUEST['filtro']) { //A segunda linha define a instrução switch, qu
                 <a href="../fiscais.php" class="btn-menu">Fiscais</a>
                 <a href="../configuracoes.php" class="btn-menu">Configurações</a>
             </nav>
+            <a href="../logout.php" id="user-redirect">Sair</a>
 
             <!--Container de Conteúdos-->
         </section>

@@ -7,7 +7,8 @@
     require 'conexao.php';
 
     $usuario = mysqli_real_escape_string($conexao, $_POST['email']);
-    $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+    $senhat = mysqli_real_escape_string($conexao, $_POST['senha']);
+    $senha = md5($senhat);
 
     $sql = "SELECT * FROM usuario_sistema WHERE emailUsuarioSys = '$usuario' AND senhaUsuarioSys = '$senha'  LIMIT 1";
     $query = mysqli_query($conexao, $sql);

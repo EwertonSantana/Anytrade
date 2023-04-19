@@ -13,11 +13,6 @@
         echo "Usuário cadastrado com sucesso!";
      }
 
-
-     else {
-        echo "Erro".mysqli_connect_errno($conexao);
-     }
-
      mysqli_close($conexao);
 
 ?>

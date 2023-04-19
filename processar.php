@@ -289,4 +289,69 @@ switch ($_REQUEST['acao']) {
             header('Location: ../AnyTrade/tabelas/ttransportadora.php');
             exit();
         };
+
+                /* cadastro de usuário administrador*/
+    case 'cadusu':
+        $nomeusu = $_POST['nomeusu'];
+        $cpfusu = $_POST['cpfusu'];
+        $sexousu = $_POST['sexousu'];
+        $emailusu = $_POST['emailusu'];
+        $senhausu = md5($_POST['senhausu']);
+
+        $sql = "INSERT INTO usuario_sistema (nomeUsuarioSys, cpfUsuarioSys, sexoUsuarioSys, emailUsuarioSys, senhaUsuarioSys) values('{$nomeusu}', '{$cpfusu}', '{$sexousu}', '{$emailusu}', '{$senhausu}')";
+
+        $resultado = $conexao->query($sql);
+
+
+        if ($resultado == true) {
+            print "Cadastro realizado com sucesso!";
+            header('Location: ../AnyTrade/cadastro/cusuarios.php');
+            break;
+        } else {
+            print "Não foi possível realizar o cadastro. Verifique as informações!";
+            header('Location: ../AnyTrade/cadastro/cusuarios.php');
+            break;
+        }
+
+
+    case 'atlusu':
+        $idusu = $_POST['idusu'];
+        $nomeusu = $_POST['nomeusu'];
+        $cpfusu = $_POST['cpfusu'];
+        $sexousu = $_POST['sexousu'];
+        $emailusu = $_POST['emailusu'];
+        $senhausu = md5($_POST['senhausu']);
+
+        $sql = "UPDATE usuario_sistema SET nomeUsuarioSys = '$nomeusu', cpfUsuarioSys = '$cpfusu',  sexoUsuarioSys = '$sexousu', emailUsuarioSys = '$emailusu', senhaUsuarioSys = '$senhausu' WHERE idUsuarioSys = '$idusu'";
+
+        $resultado = $conexao->query($sql);
+
+        if ($resultado == true) {
+            $_SESSION['message'] = "Transportadora atualizada com sucesso!";
+            header('Location: ../AnyTrade/configuracoes.php');
+            break;
+        } else {
+            $_SESSION['message'] = "Não foi possível atualizar a Transportadora. Verifique as informações!";
+            header('Location: ../AnyTrade/configuracoes.php');
+            break;
+        };
+        
+    case 'dltusu':
+        $delete = $_POST['delete'];
+        $sql = "DELETE FROM usuario_sistema WHERE idUsuarioSys='$delete'";
+
+
+        $sqlrun = mysqli_query($conexao, $sql);
+
+
+        if ($sqlrun) {
+            $_SESSION['message'] = "Transportadora excluída com sucesso!";
+            header('Location: ../AnyTrade/configuracoes.php');
+            exit();
+        } else {
+            $_SESSION['message'] = "Não foi possível excluir a Transportadora!";
+            header('Location: ../AnyTrade/configuracoes.php');
+            exit();
+        };
+
 }

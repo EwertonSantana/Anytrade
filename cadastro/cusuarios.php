@@ -31,7 +31,7 @@
     <div container>
         <!--Menu Lateral-->
         <section id="container-lateral">
-            <a href="#" id="user-redirect">Usuário</a><br>
+            <a href="#" id="user-redirect"><?php echo $_SESSION['UsuarioNome']; ?></a><br>
             <nav id="menu-lateral">
                 <a href="../cadastros.php" class="btn-menu">Cadastros</a>
                 <a href="../estoque.php" class="btn-menu">Estoque</a>
@@ -40,6 +40,7 @@
                 <a href="../fiscais.php" class="btn-menu">Fiscais</a>
                 <a href="../configuracoes.php" class="btn-menu">Configurações</a>
             </nav>
+            <a href="../logout.php" id="user-redirect">Sair</a>
             
           <!--Container de Conteúdos-->
         </section>
@@ -53,8 +54,8 @@
                         <label for="nomeusu">Usuario:</label>
                         <input type="text" id="nomeusu" name="nomeusu"required><br>
 
-                        <label for="cpfusu">Cpf:</label>
-                        <input type="text" id="Cpfusu" name="Cpfusu"required><br>
+                        <label for="cpfusu">CPF:</label>
+                        <input type="number" id="cpfusu" name="cpfusu" maxlength="11" required><br>
 
                         <label for="sexousu">Sexo:</label>
                             <span class="radio-group">
@@ -71,16 +72,13 @@
                         <label for="emailusu">E-mail:</label>
                         <input type="email" id="emailusu" name="emailusu"required><br>
 
-                        <label for="loginusu">Login:</label>
-                        <input type="text" id="loginusu" name="loginusu"required><br>
-
                         <label for="senhausu">Senha:</label>
                         <input type="password" id="senhausu" name="senhausu"required><br>
 
                         <div>
 
-                        <button value="cadprod" id="btn-acao" name="acao">Cadastrar</button>
-                        <button id="btn-acao" >Voltar</button>
+                        <button value="cadusu" id="btn-acao" name="acao">Cadastrar</button>
+                        <button id="btn-acao" onclick="windows.history.go(1)">Voltar</button>
                                 
                     </form>
                 </nav>

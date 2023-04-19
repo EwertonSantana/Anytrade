@@ -1,3 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* Definição das variáveis de cores */
+:root{
+--black: #000000;
+--orange:#ff914d;
+}
+
+/* Definição de estilos para todos os elementos */
+*{
+font-family: 'Nunito', sans-serif; /* Definição da fonte padrão */
+margin: 0; /* Remoção das margens padrão */
+padding:0; /* Remoção do preenchimento padrão */
+box-sizing: border-box; /* Cálculo do tamanho incluindo bordas e preenchimentos */
+outline: none; /* Remoção do contorno padrão dos elementos quando em foco */
+border:none; /* Remoção das bordas padrão */
+text-decoration: none; /* Remoção do sublinhado padrão */
+text-transform: capitalize; /* Transformação do texto em maiúsculas somente na primeira letra de cada palavra */
+transition: all .2s linear; /* Definição da transição suave de 0.2 segundos em todos os estilos */
+}
+
+/* Definição de estilos para o elemento html */
+html{
+font-size: 62.5%; /* Definição do tamanho da fonte em 62.5% para facilitar o cálculo em relação ao tamanho padrão */
+overflow-x: hidden; /* Ocultação da barra de rolagem horizontal */
+scroll-padding-top:6rem; /* Definição do espaçamento superior do conteúdo quando a rolagem é acionada */
+scroll-behavior: smooth; /* Definição da rolagem suave ao clicar em links */
+}
+header{
+  position: fixed; /* The header element is fixed in the viewport */
+  top:0; left:0; right:0; /* The header element is positioned at the top left and right of the viewport */
+  z-index: 1000; /* The header element has a z-index of 1000, which means it will be displayed on top of other elements */
+  background:#fff; /* The background color of the header element is white */
+  padding:2rem 9%; /* The padding on the top and bottom of the header element is 2rem, and the padding on the left and right is 9% of the viewport width */
+  display: flex; /* The header element is a flex container */
+  align-items: center; /* The child elements of the header element are vertically centered */
+  justify-content: space-between; /* The child elements of the header element are horizontally spaced out evenly */
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); /* The header element has a box shadow of 0px on the x-axis, .5rem (8px) on the y-axis, 1rem (16px) blur radius, and a slightly transparent black color */
+}
+.heading{
+  text-align: center; /* Centralização do texto */
+  text-transform: uppercase; /* Transformação do texto em maiúsculas */
+  font-size: 4rem; /* Definição do tamanho da fonte */
+  color:var(--black); /* Definição da cor do texto a partir da variável --black */
+  padding:1rem; /* Definição do espaçamento interno */
+  }
+  
+  /* Definição de estilos para o elemento span dentro do elemento com classe heading */
+  .heading span{
+  text-transform: uppercase; /* Transformação do texto em maiúsculas */
+  color:var(--orange); /* Definição da cor do texto a partir da variável --orange */
+  }
+
+header .logo{
+  font-size: 2.5rem; /* The font size of the element with the class "logo" inside the header is 2.5rem (40px) */
+  color:var(--black); /* The text color of the element with the class "logo" inside the header is the value of the CSS variable --black */
+}
+
+header .navbar a{
+  font-size: 1.7rem; /* The font size of the links inside the element with the class "navbar" inside the header is 1.7rem (27px) */
+  color:var(--black); /* The text color of the links inside the element with the class "navbar" inside the header is the value of the CSS variable --black */
+  margin:0 1rem; /* The links inside the element with the class "navbar" inside the header have a margin of 0 on the top and bottom and 1rem (16px) on the left and right */
+}
+
+header .navbar a:hover{
+  color:var(--orange); /* When the mouse hovers over the links inside the element with the class "navbar" inside the header, the text color changes to the value of the CSS variable --orange */
+}
+
+header .icons a{
+  font-size: 2.5rem; /* The font size of the links inside the element with the class "icons" inside the header is 2.5rem (40px) */
+  color:var(--black); /* The text color of the links inside the element with the class "icons" inside the header is the value of the CSS variable --black */
+  margin-left:1.5rem; /* The links inside the element with the class "icons" inside the header have a margin of 0 on the top and bottom and 1.5rem (24px) on the left */
+}
+
+header .icons a:hover{
+  color:var(--orange); /* When the mouse hovers over the links inside the element with the class "icons" inside the header, the text color changes to the value of the CSS variable --orange */
+}
+
+#menu-bar{ /* estilo para o elemento com o ID menu-bar */
+  font-size: 2.5rem; /* tamanho da fonte 2.5 rem */
+  padding: .5rem 1.5rem; /* preenchimento de .5rem (cima e baixo) e 1.5rem (esquerda e direita) */
+  border:.1rem solid var(--black); /* borda sólida com 0.1 rem de largura e cor definida pela variável --black */
+  color:var(--black); /* cor do texto definida pela variável --black */
+  border-radius: .3rem; /* borda arredondada com 0.3rem de raio */
+  cursor: pointer; /* cursor do mouse como um ponteiro */
+  display: none; /* o elemento não é exibido na tela */
+}
+
 /* Definição de estilos para a tabela de produtos */
 table {
     border-collapse: collapse;
@@ -60,4 +148,24 @@ table {
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
